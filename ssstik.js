@@ -1,4 +1,4 @@
-import axios from 'axios';
+const axios = require("axios")
 function ssstik(url) {
     return new Promise((resolve, reject) => {
         try {
