@@ -2,20 +2,21 @@ import requests
 import json
 import re
 
+
 def y2mate(url):
     match = re.search(r"youtube\.com/.*v=([^&]*)", url)
     if match:
         resultIDVideo = match.group(1)
         print(resultIDVideo)
         headers = {
-        'accept': "*/*",
-        'accept-language': "en-US,en;q=0.9,vi;q=0.8",
-        'content-type': "application/x-www-form-urlencoded; charset=UTF-8"
+            'accept': "*/*",
+            'accept-language': "en-US,en;q=0.9,vi;q=0.8",
+            'content-type': "application/x-www-form-urlencoded; charset=UTF-8"
         }
         data = {
-        'url': 'https://youtu.be/' + resultIDVideo,
-        'q_auto': 0,
-        'ajax': 2
+            'url': 'https://youtu.be/' + resultIDVideo,
+            'q_auto': 0,
+            'ajax': 2
         }
         url = 'https://www.y2mate.com/mates/en68/analyze/ajax'
         res = requests.post(url, headers=headers, data=data)
@@ -61,5 +62,6 @@ def y2mate(url):
     else:
         result = "Video không hợp lệ"
         return result
+
 
 y2mate('https://www.youtube.com/watch?v=5zoBkldG1PY')
