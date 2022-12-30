@@ -5,7 +5,7 @@
   "author": "Thiệu Trung Kiên",
   "msg": "Nếu thấy lỗi hãy báo cáo và tôi sẽ sửa nó",
   "contact":{
-    "facebook": "https://facebook.com/ThieuTrungKien.Profile"
+    "facebook": "https://facebook.com/ThieuTrungKi3n"
   }
 }
 ```
