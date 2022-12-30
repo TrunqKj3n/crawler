@@ -2,7 +2,7 @@ import axios from "axios";
 import { load } from "cheerio";
 function y2mate(url) {
     return new Promise(async(resolve, reject) =>{
-        if(await youtube_parser(url) == false) reject("Không tìm thấy id của video này")
+        if(!await youtube_parser(url)) reject("Không tìm thấy id của video này")
         axios({
             method: 'post',
             url: 'https://www.y2mate.com/mates/en68/analyze/ajax',
